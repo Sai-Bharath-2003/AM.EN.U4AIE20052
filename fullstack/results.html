@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Search Results</title>
+</head>
+<body>
+    <h1>Train Schedule Results</h1>
+    <table>
+        <tr>
+            <th>Train Name</th>
+            <th>Train Number</th>
+            <th>Departure Time (HH:MM:SS)</th>
+            <th>Seat Availability (Sleeper)</th>
+            <th>Seat Availability (AC)</th>
+            <th>Price (Sleeper)</th>
+            <th>Price (AC)</th>
+        </tr>
+        {% for train in trains %}
+        <tr>
+            <td>{{ train['trainName'] }}</td>
+            <td>{{ train['trainNumber'] }}</td>
+            <td>{{ train['departureTime']['Hours'] }}:{{ train['departureTime']['Minutes'] }}:{{ train['departureTime']['Seconds'] }}</td>
+            <td>{{ train['seatsAvailable']['sleeper'] }}</td>
+            <td>{{ train['seatsAvailable']['AC'] }}</td>
+            <td>{{ train['price']['sleeper'] }}</td>
+            <td>{{ train['price']['AC'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

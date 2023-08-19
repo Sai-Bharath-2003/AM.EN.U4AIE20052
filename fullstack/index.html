@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Search</title>
+</head>
+<body>
+    <h1>Train Schedule Search</h1>
+    <form action="/get_trains" method="POST">
+        <label for="from_station">From Station:</label>
+        <input type="text" name="from_station" id="from_station" required><br><br>
+        <label for="to_station">To Station:</label>
+        <input type="text" name="to_station" id="to_station" required><br><br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
